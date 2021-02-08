@@ -8,4 +8,5 @@ public interface ProjectDAO {
 	
 	void insertProject(ProjectVO projectVO);
 
+	void updateProject(ProjectVO projectVO);
 }

@@ -32,6 +32,7 @@
     <td>${item.proDate}</td>
   </tr>
 </c:forEach>
+<a href="${path}/projectUpdateForm.do?proId=${item.proId}">¼öÁ¤</a>
 </tbody>
 </table>
 </body>
