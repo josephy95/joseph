@@ -100,7 +100,7 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/projectUpdate.do")
 	public String projectUpdate(@ModelAttribute("projectVO") ProjectVO projectVO, Model model) {
-
+		System.out.println(projectVO);
 		projectService.updateProject(projectVO);
 		
 		return "redirect:/projectList.do";

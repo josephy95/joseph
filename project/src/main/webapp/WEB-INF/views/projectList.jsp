@@ -30,9 +30,9 @@
     <td>${item.proTitle}</td>
     <td>${item.proBody}</td>
     <td>${item.proDate}</td>
+  	<td><a href="${path}/projectUpdateForm.do?proId=${item.proId}">수정</a></td>
   </tr>
 </c:forEach>
-<a href="${path}/projectUpdateForm.do?proId=${item.proId}">수정</a>
 </tbody>
 </table>
 </body>

@@ -16,6 +16,10 @@
 	<table>
 	<tbody>
 	<tr>
+	   <th>번호</th>
+	   <td><form:input path="proId" id="proId" size="20" maxlength="20" /></td>
+	</tr>
+	<tr>
 	   <th>제목</th>
 	   <td><form:input path="proTitle" id="proTitle" size="20" maxlength="20" /></td>
 	</tr>
