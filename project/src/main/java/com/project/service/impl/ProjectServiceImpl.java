@@ -42,4 +42,9 @@ public class ProjectServiceImpl implements ProjectService {
 		
 		return projectMapper.detailProject(proId);
 	}
+	
+	@Override
+	public void viewCount(int proId) {
+		projectMapper.viewCount(proId);
+	}
 }

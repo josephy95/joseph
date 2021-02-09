@@ -4,12 +4,14 @@
 <mapper namespace="com.project.service.dao.ProjectDAO">
 
 	<select id="selectProjectList" resultType="projectVO">
-		SELECT PRO_ID,
-		PRO_TITLE,
-		PRO_BODY,
-		PRO_DATE
-		FROM TB_PROJECT
-		ORDER BY PRO_ID DESC
+		SELECT
+	PRO_ID, 
+	PRO_TITLE, 
+	PRO_BODY, 
+	PRO_DATE,
+	VIEW_COUNT
+	FROM TB_PROJECT
+	ORDER BY PRO_ID DESC
 	</select>
 
 	<insert id="insertProject">
@@ -67,5 +69,7 @@
 	WHERE
 		PRO_ID = #{proId}
 	</update>
+	
+	
 	
 </mapper>

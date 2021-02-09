@@ -8,6 +8,8 @@ public class ProjectVO {
 	private String proTitle;
 	private String proBody;
 	private Date proDate;
+	private Integer viewCount;
+
 	
 	public Integer getProId() {
 		return proId;
@@ -32,6 +34,13 @@ public class ProjectVO {
 	}
 	public void setProDate(Date proDate) {
 		this.proDate = proDate;
+	}
+	
+	public Integer getViewCount() {
+		return viewCount;
+	}
+	public void setViewCount(Integer viewCount) {
+		this.viewCount = viewCount;
 	}
 	
 	@Override

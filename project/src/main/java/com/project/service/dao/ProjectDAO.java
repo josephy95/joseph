@@ -12,5 +12,7 @@ public interface ProjectDAO {
 
 	void deleteProject(int proId);
 	
+	void viewCount(int proId);
+	
 	List<ProjectVO> detailProject(int proId);
 }

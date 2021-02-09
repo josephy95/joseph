@@ -14,4 +14,6 @@ public interface ProjectService {
 
 	List<ProjectVO> detailProject(int proId);
 
+	void viewCount(int proId);
+
 }
