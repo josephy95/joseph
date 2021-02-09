@@ -36,4 +36,10 @@ public class ProjectServiceImpl implements ProjectService {
 	public void deleteProject(int proId) {
 		projectMapper.deleteProject(proId);
 	}
+	
+	@Override
+	public List<ProjectVO> detailProject(int proId) {
+		
+		return projectMapper.detailProject(proId);
+	}
 }

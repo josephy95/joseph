@@ -118,4 +118,18 @@ public class HomeController {
 		return "redirect:/projectList.do";
 	}
 	
+	/**
+	 * 글을 상세 페이지
+	 * @return projectDetailForm
+	 */
+	@RequestMapping(value = "/projectDetailForm.do")
+	public String detailProject(@ModelAttribute("projectVO") ProjectVO projectVO, Model model) {
+
+	    List<ProjectVO> list = projectService.detailProject(projectVO.getProId());
+
+	    model.addAttribute("list", list);
+	    
+		return "projectDetailForm";
+	}
+	 
 }

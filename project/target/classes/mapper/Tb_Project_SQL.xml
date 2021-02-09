@@ -9,7 +9,7 @@
 		PRO_BODY,
 		PRO_DATE
 		FROM TB_PROJECT
-		<!-- ORDER BY PRO_ID DESC -->
+		ORDER BY PRO_ID DESC
 	</select>
 
 	<insert id="insertProject">
@@ -29,22 +29,43 @@
 		SYSDATE
 		)
 	</insert>
-	
+
 	<update id="updateProject">
 		UPDATE
 		TB_PROJECT
 		SET
 		PRO_TITLE = #{proTitle},
-		PRO_BODY = #{proBody}
+		PRO_BODY =
+		#{proBody}
 		WHERE
 		PRO_ID = #{proId}
 	</update>
-	
+
 	<delete id="deleteProject">
-		DELETE FROM 
+		DELETE FROM
 		TB_PROJECT
 		WHERE
-		PRO_ID = #{proId} 
+		PRO_ID = #{proId}
 	</delete>
 
+	<select id="detailProject" resultType="projectVO">
+		SELECT
+		PRO_ID,
+		PRO_TITLE,
+		PRO_BODY,
+		PRO_DATE
+		FROM TB_PROJECT
+		WHERE
+		PRO_ID = #{proId}
+	</select>
+
+	<update id="viewCount">
+	UPDATE
+		TB_PROJECT
+	SET
+		VIEW_COUNT = VIEW_COUNT + 1
+	WHERE
+		PRO_ID = #{proId}
+	</update>
+	
 </mapper>

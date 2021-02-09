@@ -12,4 +12,6 @@ public interface ProjectService {
 
 	void deleteProject(int proId);
 
+	List<ProjectVO> detailProject(int proId);
+
 }
