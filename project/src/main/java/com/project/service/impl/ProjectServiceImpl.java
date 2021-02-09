@@ -12,7 +12,7 @@ import com.project.vo.ProjectVO;
 
 @Service("projectService")
 public class ProjectServiceImpl implements ProjectService {
-	
+
 	@Autowired
 	private ProjectDAO projectMapper;
 
@@ -24,11 +24,16 @@ public class ProjectServiceImpl implements ProjectService {
 
 	@Override
 	public void insertProject(ProjectVO projectVO) {
-		projectMapper.insertProject(projectVO);	
-	}	
-	
+		projectMapper.insertProject(projectVO);
+	}
+
 	@Override
 	public void updateProject(ProjectVO projectVO) {
 		projectMapper.updateProject(projectVO);
+	}
+
+	@Override
+	public void deleteProject(int proId) {
+		projectMapper.deleteProject(proId);
 	}
 }
